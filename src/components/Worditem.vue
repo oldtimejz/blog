@@ -9,16 +9,14 @@
             哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或阿凡达军扩啦军多所付绿扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩
             哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或阿凡达军扩啦军多所付绿扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩
             哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或阿凡达军扩啦军多所付绿扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩
-            哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或阿凡达军扩啦军多所付绿扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩
-            哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或阿凡达军扩啦军多所付绿扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩
         </div> 
         <div class="item-resp">
             <p>回复</p>
             <ul>
-                <li>???</li>
-                <li>wll</li>
-                <li>fsaf</li>
-                <li>fdad</li>
+                <li><span>???</span> <span class="right">回复</span></li>
+                <li><span>???</span> <span class="right">回复</span></li>
+                <li><span>???</span> <span class="right">回复</span></li>
+                <li><span>???</span> <span class="right">回复</span></li>
             </ul>
         </div>
     </div>
@@ -36,6 +34,7 @@ export default {
     border: 1px solid #efefef;
     border-radius: 20px;
     text-align: left;
+    font-size: 14px;
     background: rgba(86, 156, 156, 0.2);
     color: #fff;
 }
@@ -65,6 +64,16 @@ export default {
 .u-name{
     display: inline-block;
     margin-left: 20px;
+}
+ul{
+    margin-left: 20px;
+}
+ul li{
+    padding:5px 50px 5px 0;
+}
+p{
+    color:#123c4c;
+    font-weight: 600;
 }
 </style>
 
