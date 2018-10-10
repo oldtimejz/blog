@@ -8,15 +8,14 @@
         <div class="item-content">
             哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或阿凡达军扩啦军多所付绿扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩
             哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或阿凡达军扩啦军多所付绿扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩
-            哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或阿凡达军扩啦军多所付绿扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩
         </div> 
         <div class="item-resp">
             <p>回复</p>
             <ul>
-                <li><span>???</span> <span class="right">回复</span></li>
-                <li><span>???</span> <span class="right">回复</span></li>
-                <li><span>???</span> <span class="right">回复</span></li>
-                <li><span>???</span> <span class="right">回复</span></li>
+                <li><span>???</span></li>
+                <li><span>???</span></li>
+                <li><span>???</span></li>
+                <li><span>???</span></li>
             </ul>
         </div>
     </div>
@@ -37,6 +36,7 @@ export default {
     font-size: 14px;
     background: rgba(86, 156, 156, 0.2);
     color: #fff;
+    transition: all 0.4s;
 }
 .w-items:hover{
     box-shadow: 1px 1px 8px #99daaf;

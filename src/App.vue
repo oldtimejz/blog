@@ -72,7 +72,7 @@ export default {
   width: 100px;
 }
 .container{
-  width: 1400px;
+  width: 80%;
   margin: 0 auto;
   padding-top: 40px;
 }

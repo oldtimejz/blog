@@ -1,9 +1,9 @@
 <template>
     <div class="item">
         <el-row>
-            <el-col :span="3">
+            <el-col :span="4">
                 <div class="grid-content">
-                    <img src="../assets/logo.png" alt="" width="100" height="100">
+                    <img src="../assets/logo.png" alt="" height="100" />
                 </div>
             </el-col>
             <el-col :span="20">
@@ -19,8 +19,6 @@
                 </div>
             </el-col>
         </el-row>
-        
-        
     </div>
 </template>
 <script>

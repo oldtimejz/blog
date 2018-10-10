@@ -55,7 +55,7 @@ export default {
 <style scoped>
 .container-left{
     float: left;
-    width: 300px;
+    width: 27%;
 }
 .text {
     font-size: 14px;
@@ -76,7 +76,7 @@ export default {
   }
 
   .box-card {
-    width: 300px;
+    width: 100%;
     margin-bottom: 20px; 
     opacity: 0.9;
   }
@@ -86,6 +86,6 @@ export default {
       font-weight: 500;
   }
   .container-right{
-      padding-left: 380px;
+      padding-left: 33%;
   }
 </style>
