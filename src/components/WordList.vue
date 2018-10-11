@@ -1,19 +1,21 @@
 <template>
     <div class="wordlist">
-        <Worditem></Worditem>
+        <Worditem @resp="showCBox"></Worditem>
     </div>
 </template>
 <script>
-import Worditem from './Worditem'
+import Worditem from "./Worditem";
 export default {
-    data () {
-        return {}
-    },
-    components: {
-        Worditem,
+  data() {
+    return {};
+  },
+  methods: {
+    showCBox(data) {
+      this.$emit("showCommentBox", data);
     }
-}
+  },
+  components: {
+    Worditem
+  }
+};
 </script>
-<style scoped>
-
-</style>

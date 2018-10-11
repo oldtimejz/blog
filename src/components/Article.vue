@@ -40,52 +40,49 @@
   </div>
 </template>
 <script>
-import ArticleList from './ArticleList.vue'
+import ArticleList from "./ArticleList.vue";
 export default {
-    data () {
-        return {
-
-        }
-    },
-    components:{
-        ArticleList,
-    }
-}
+  data() {
+    return {};
+  },
+  components: {
+    ArticleList
+  }
+};
 </script>
 <style scoped>
-.container-left{
-    float: left;
-    width: 300px;
+.container-left {
+  float: left;
+  width: 27%;
 }
 .text {
-    font-size: 14px;
-  }
+  font-size: 14px;
+}
 
-  .item {
-    margin-bottom: 18px;
-    
-  }
+.item {
+  margin-bottom: 18px;
+}
 
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
-  }
-  .clearfix:after {
-    clear: both
-  }
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
 
-  .box-card {
-    width: 300px;
-    margin-bottom: 20px; 
-    opacity: 0.9;
-  }
-  .box-card .clearfix{
-      color: #fff;
-      font-size: 18px;
-      font-weight: 500;
-  }
-  .container-right{
-      padding-left: 380px;
-  }
+.box-card {
+  width: 100%;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+.box-card .clearfix {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+.container-right {
+  padding-left: 33%;
+}
 </style>
