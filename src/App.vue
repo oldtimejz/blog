@@ -25,6 +25,7 @@
         <el-menu-item index="3" ><router-link to='/About'> 关于我</router-link></el-menu-item>
         <el-menu-item index="4"><router-link to='/Tellme'> 留言</router-link></el-menu-item>
       </el-menu>
+      <Account></Account>
     </div>
     <div class="container">
       <router-view></router-view>
@@ -33,54 +34,54 @@
 </template>
 
 <script>
-
-
+import Account from "./components/Account";
 export default {
-  name: 'app',
+  name: "app",
   components: {
-
+    Account
   },
   data() {
-      return {
-        activeIndex: '1'
-      };
-    },
-    methods: {
-      handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      }
+    return {
+      activeIndex: "1"
+    };
+  },
+  methods: {
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
     }
-}
+  }
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
-.el-menu.el-menu--horizontal{
+.el-menu.el-menu--horizontal {
   width: 700px;
   margin: 0 auto;
 }
-.header{
+.header {
+  position: relative;
   background: rgb(84, 92, 100);
 }
-.header ul li{
+.header ul li {
   width: 100px;
 }
-.container{
+.container {
   width: 80%;
   margin: 0 auto;
-  padding-top: 40px;
+  padding: 40px 0 120px 0;
 }
-.header ul li a{
+.header ul li a {
   color: #fff;
   display: block;
-  }
- .header  .el-menu--horizontal>.el-submenu .el-submenu__icon-arrow{
-    position: absolute;
-  }
+}
+.header .el-menu--horizontal > .el-submenu .el-submenu__icon-arrow {
+  position: absolute;
+}
 </style>

@@ -40,7 +40,7 @@
   </div>
 </template>
 <script>
-import ArticleList from "./ArticleList.vue";
+import ArticleList from "./ArticleList";
 export default {
   data() {
     return {};

@@ -1,20 +1,26 @@
 <template>
     <div class="box">
         <span class="close el-icon-close" @click="closeCBox"></span>
-        <el-input placeholder="请输入内容"  v-model="input10" clearable></el-input>
-        <el-button type="primary">发送</el-button>
+        <el-input :placeholder="type"  v-model="conten" clearable></el-input>
+        <el-button type="primary" @click="sendMsg">发表内容</el-button>
     </div>
 </template>
 <script>
 export default {
+  props: ["type"],
   data() {
     return {
-      input10: ""
+      conten: ""
     };
   },
   methods: {
     closeCBox() {
       this.$emit("close", false);
+      this.conten = "";
+    },
+    sendMsg() {
+      this.$emit("comment", { type: this.type, content: this.conten });
+      this.conten = "";
     }
   }
 };

@@ -2,30 +2,26 @@
     <div class="w-items">
         <div class="item-title">
             <img class="u-headimg left" src="../assets/logo.png" alt="">
-            <span class="u-name">jiangjiangjiang</span>
-            <span class="right">{{ "2018-10-3" | dateFormat}}</span>
+            <span class="u-name">{{commentitem.username}}</span>
+            <span class="right">{{ commentitem.date | dateFormat}}</span>
         </div>
         <div class="item-content">
-            哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或阿凡达军扩啦军多所付绿扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩
-            哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或阿凡达军扩啦军多所付绿扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩
+          {{commentitem.content}}
         </div> 
         <div class="item-resp">
-            <p>回复</p>
-            <ul>
-                <li><span @click="respone">???</span></li>
-                <li><span @click="respone">???</span></li>
-                <li><span @click="respone">???</span></li>
-                <li><span @click="respone">???</span></li>
-            </ul>
+            <p @click="respone">发表评论</p>
+              <ul>
+                  <li v-for='r in commentitem.resp' :key="r.id"><span @click="respone">{{r.commenter}}<span class="huifu">回复</span>{{r.responser}}：{{r.content}}</span></li>
+              </ul>
         </div>
     </div>
 </template>
 <script>
 export default {
-  props: ["flag"],
+  props: ["flag", "commentitem"],
   methods: {
     respone() {
-      this.$emit("resp", true);
+      this.$emit("resp", { flag: true, type: "回复" });
     }
   },
   filters: {
@@ -56,6 +52,7 @@ export default {
   background: rgba(86, 156, 156, 0.2);
   color: #fff;
   transition: all 0.4s;
+  margin-bottom: 40px;
 }
 .w-items:hover {
   box-shadow: 1px 1px 8px #99daaf;
@@ -93,6 +90,11 @@ ul li {
 p {
   color: #123c4c;
   font-weight: 600;
+}
+.huifu {
+  display: inline-block;
+  margin: 0 3px;
+  color: #4d949a;
 }
 </style>
 

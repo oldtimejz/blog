@@ -1,11 +1,14 @@
 <template>
     <div class="wordlist">
-        <Worditem @resp="showCBox"></Worditem>
+      <transition-group>
+        <Worditem @resp="showCBox" v-for="item in comments" :key="item.id" :commentitem='item'></Worditem>
+      </transition-group>  
     </div>
 </template>
 <script>
 import Worditem from "./Worditem";
 export default {
+  props: ["comments"],
   data() {
     return {};
   },
@@ -19,3 +22,18 @@ export default {
   }
 };
 </script>
+<style scoped>
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+  transform: translateY(80px);
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.4s ease-in;
+}
+.v-leave-active {
+  position: absolute;
+  width: 100%;
+}
+</style>
