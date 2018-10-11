@@ -8,10 +8,11 @@
         @select="handleSelect"
         background-color="#545c64"
         text-color="#fff"
-        active-text-color="#ffd04b">
-        <el-menu-item index="1"><router-link to='/'> 首页</router-link></el-menu-item>
-        <el-submenu index="2">
-          <template slot="title"><router-link to='/Article'>文章</router-link></template>
+        active-text-color="#ffd04b"
+        router="true">
+        <el-menu-item index="/"> 首页</el-menu-item>
+        <el-submenu index="/Article">
+          <template slot="title">文章</template>
           <el-menu-item index="2-1">选项1</el-menu-item>
           <el-menu-item index="2-2">选项2</el-menu-item>
           <el-menu-item index="2-3">选项3</el-menu-item>
@@ -22,8 +23,8 @@
             <el-menu-item index="2-4-3">选项3</el-menu-item>
           </el-submenu>
         </el-submenu>
-        <el-menu-item index="3" ><router-link to='/About'> 关于我</router-link></el-menu-item>
-        <el-menu-item index="4"><router-link to='/Tellme'> 留言</router-link></el-menu-item>
+        <el-menu-item index="/About" >关于我</el-menu-item>
+        <el-menu-item index="/Tellme">留言</el-menu-item>
       </el-menu>
       <Account></Account>
     </div>

@@ -5,17 +5,17 @@ import "element-ui/lib/theme-chalk/index.css";
 import "../public/css/common.css";
 import VueRouter from "vue-router";
 import router from "./router/index.js";
-import Vuex from "vuex";
-import store from "./store.js";
+//import store from "./store.js";
+//import Vuex from "vuex";
 
 Vue.use(elementui);
 Vue.use(VueRouter);
-Vue.use(Vuex);
+//Vue.use(Vuex);
 
 Vue.config.productionTip = false;
 
 new Vue({
   router,
-  store,
+  //store,
   render: h => h(App)
 }).$mount("#app");
