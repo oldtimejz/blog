@@ -28,8 +28,8 @@ export default {
         initialFrameWidth: "100%",
         initialFrameHeight: 600,
 
-        BaseUrl: "src/",
-        UEDITOR_HOME_URL: "./plugins/uedition/"
+        BaseUrl: "",
+        UEDITOR_HOME_URL: "/plugins/uedition/"
       }
     };
   },
