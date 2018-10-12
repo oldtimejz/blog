@@ -3,7 +3,7 @@
         <el-row>
             <el-col :span="4">
                 <div class="grid-content">
-                    <img src="../assets/logo.png" alt="" height="100" />
+                    <router-link to="/Descrition"><img src="../assets/logo.png" alt="" height="100" /></router-link>
                 </div>
             </el-col>
             <el-col :span="20">
@@ -22,39 +22,36 @@
     </div>
 </template>
 <script>
-export default {
-    
-}
+export default {};
 </script>
 <style scoped>
-.item{
-    height: 100px;
-    padding: 15px;
-    text-align: left;
-    background: rgba(255,255,255,0.8);
-    border: 1px solid #ebeef5;
-    border-radius: 5px;
-    transition: all .2s ease;
-    margin-bottom: 20px;
-    
+.item {
+  height: 100px;
+  padding: 15px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ebeef5;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
 }
-.item:hover{
-    box-shadow: 2px 3px 4px #f2f2f2;
+.item:hover {
+  box-shadow: 2px 3px 4px #f2f2f2;
 }
-.content-title{
-    line-height:32px;
-    font-size: 22px;
-    padding-bottom: 10px;
+.content-title {
+  line-height: 32px;
+  font-size: 22px;
+  padding-bottom: 10px;
 }
-.content-desc{
-    height: 49px;
-    line-height: 27px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
+.content-desc {
+  height: 49px;
+  line-height: 27px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
-.el-row{
-    height: 100%;
+.el-row {
+  height: 100%;
 }
 </style>

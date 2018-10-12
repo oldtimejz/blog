@@ -92,6 +92,7 @@ export default {
           message: "评论成功",
           type: "success"
         });
+        this.flag = !this.flag;
       }
     }
   },
