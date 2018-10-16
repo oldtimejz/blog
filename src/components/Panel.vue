@@ -26,7 +26,7 @@ export default {
         initialFrameWidth: "100%",
         initialFrameHeight: 600,
 
-        BaseUrl: ""
+        UEDITOR_HOME_URL: "./UEditor/"
       }
     };
   },
