@@ -1,11 +1,9 @@
 <template>
-  <div class="components-container">
-    <div class="info">UE编辑器示例<br>需要使用编辑器时，调用UE公共组件即可。可设置填充内容defaultMsg，配置信息config(宽度和高度等)，可调用组件中获取内容的方法。</div>
-    
+  <div class="components-container">    
     <div class="editor-container">
       <UE :defaultMsg='defaultMsg' :config='config' ref="ue"></UE>
     </div>
-    <button @click="getUEContent()">获取内容</button>
+    <el-button type="primary" @click="getUEContent()">获取内容</el-button>
   </div>
 </template>
 <style>
@@ -28,8 +26,7 @@ export default {
         initialFrameWidth: "100%",
         initialFrameHeight: 600,
 
-        BaseUrl: "",
-        UEDITOR_HOME_URL: "/plugins/uedition/"
+        BaseUrl: ""
       }
     };
   },
