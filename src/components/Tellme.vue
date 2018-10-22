@@ -15,6 +15,7 @@ export default {
     return {
       flag: false,
       type: "留言",
+      r: null,
       comments: [
         {
           id: 1,
@@ -69,6 +70,11 @@ export default {
     show(data) {
       this.flag = data.flag;
       this.type = data.type;
+      if (data.id) {
+        this.r = data;
+      } else {
+        this.r = null;
+      }
     },
     close(data) {
       this.flag = data;
@@ -79,7 +85,7 @@ export default {
           message: "警告,输入内容不能为空!",
           type: "warning"
         });
-      } else {
+      } else if (data.type == "留言") {
         var datas = {
           id: this.comments.length,
           username: "游客4",
@@ -88,6 +94,30 @@ export default {
           resp: []
         };
         this.comments.unshift(datas);
+        this.$message({
+          message: "评论成功",
+          type: "success"
+        });
+        this.flag = !this.flag;
+      } else {
+        //如果是留言。需要回说明回复的人
+        if (this.r) {
+          for (var i = 0, len = this.comments.length; i < len; i++) {
+            if (this.comments[i].id == this.r.id) {
+              var datas = {
+                cid: this.r.r ? this.r.r.length : this.comments[i].resp.length,
+                commenter: "游客4",
+                responser: this.r.r
+                  ? this.r.r.responser || this.r.r.commenter //如果是单独评论的话就是没有回复的人，如果是评论其他人的话那就是判断是否有回复人没有的话就是评论人
+                  : undefined,
+                content: data.content
+              };
+              this.comments[i].resp.push(datas);
+              break;
+            }
+          }
+        }
+
         this.$message({
           message: "评论成功",
           type: "success"

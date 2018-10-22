@@ -21,7 +21,7 @@ export default {
   components: { UE },
   data() {
     return {
-      defaultMsg: "这里是UE测试",
+      defaultMsg: "",
       config: {
         initialFrameWidth: "100%",
         initialFrameHeight: 600,

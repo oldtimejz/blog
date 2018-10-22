@@ -26,7 +26,7 @@ export default {
 .v-enter,
 .v-leave-to {
   opacity: 0;
-  transform: translateY(80px);
+  transform: translateX(-180px);
 }
 .v-enter-active,
 .v-leave-active {

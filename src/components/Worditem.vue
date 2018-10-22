@@ -9,9 +9,15 @@
           {{commentitem.content}}
         </div> 
         <div class="item-resp">
-            <p @click="respone">发表评论</p>
+            <p @click="respone(commentitem.id)">发表评论</p>
               <ul>
-                  <li v-for='r in commentitem.resp' :key="r.id"><span @click="respone">{{r.commenter}}<span class="huifu">回复</span>{{r.responser}}：{{r.content}}</span></li>
+                  <li v-for='r in commentitem.resp' :key="r.id">
+                    <span @click="respone(commentitem.id ,r)">
+                      {{r.commenter}}
+                      <span class="huifu" v-if="r.responser != undefined">回复</span>
+                      {{r.responser}}：{{r.content}}
+                    </span>
+                    </li>
               </ul>
         </div>
     </div>
@@ -20,14 +26,13 @@
 export default {
   props: ["flag", "commentitem"],
   methods: {
-    respone() {
-      this.$emit("resp", { flag: true, type: "回复" });
+    respone(id, r) {
+      this.$emit("resp", { flag: true, type: "回复", id: id, r: r });
     }
   },
   filters: {
     dateFormat(date, pattern = "") {
       var new_date = new Date(date);
-      console.log(date);
       var year = new_date.getFullYear();
       var month = (new_date.getMonth() + 1).toString().padStart(2, "0");
       var d = new_date
@@ -86,6 +91,7 @@ ul {
 }
 ul li {
   padding: 5px 50px 5px 0;
+  cursor: pointer;
 }
 p {
   color: #123c4c;
